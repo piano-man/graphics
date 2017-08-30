@@ -13,7 +13,7 @@ void myInit()
 	glPointSize(3.0);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluOrtho2D(0.0,(GLdouble)screenWidth,0.0,(GLdouble)screenHeight);
+	gluOrtho2D(-(GLdouble)screenWidth,(GLdouble)screenWidth,0.0,(GLdouble)screenHeight);
 	a=100;
 	b=0.0;
 	c=d=100;
@@ -25,6 +25,11 @@ void myDisplay()
 	GLdouble i=0;
 	glClear(GL_COLOR_BUFFER_BIT);
 	glBegin(GL_POINTS);
+	for(i=-3.5;i<0;i+=0.005)
+	{
+		GLdouble func=exp(i)*cos(2*3.14159*i);
+		glVertex2i(a*i+b,c*func+d);
+	}
 
 	for(i=0;i<3.5;i+=0.005)
 	{
