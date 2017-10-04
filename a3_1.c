@@ -7,7 +7,7 @@ glClearColor(r, g, b, 0.0);
 // used to set up the view volume,
 //GL_MODELVIEW can be used to set up viewing
 //transformation
-glMatrixMode(GL_PROJECTION);
+//glMatrixMode(GL_PROJECTION);
 // gluOrtho2D specifies the coordinates to
 //be used with the viewport which defaults to the
 //window size.

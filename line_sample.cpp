@@ -7,7 +7,7 @@ void init2D(float r, float g, float b)
 	// used to set up the view volume,
 	//GL_MODELVIEW can be used to set up viewing
 	//transformation
-	glMatrixMode(GL_PROJECTION);
+	//glMatrixMode(GL_PROJECTION);
 	// gluOrtho2D specifies the coordinates to
 	//be used with the viewport which defaults to the
 	//window size.
@@ -23,8 +23,8 @@ void display(void)
 	// glVertext2i takes integer as arguments,
 	//we also have other versions for float and double
 	//glVertext2f, glVertext2d
-	glVertex2i(10, 10);
-	glVertex2i(100, 100);
+	glVertex2i(0, 0);
+	glVertex2i(1366, 768);
 	glEnd();
 	glFlush();
 }

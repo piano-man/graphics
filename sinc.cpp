@@ -11,7 +11,7 @@ void myInit()
 	glClearColor(1.0,1.0,1.0,0.0);
 	glColor3f(1.0,0.0,0.0);
 	glPointSize(3.0);
-	glMatrixMode(GL_PROJECTION);
+	//glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	gluOrtho2D(-(GLdouble)screenWidth,(GLdouble)screenWidth,0.0,(GLdouble)screenHeight);
 	a=100;
@@ -36,18 +36,6 @@ void myDisplay()
 		GLdouble func=exp(-i)*cos(2*3.14159*i);
 		glVertex2i(a*i+b,c*func+d);
 	}
-	glEnd();
-
-	glBegin(GL_LINES);
-	glColor3f(0.0,0.0,1.0);
-	glVertex2i(0.0,screenHeight/2);
-	glVertex2i(screenWidth,screenHeight/2);
-	glEnd();
-
-	//to test
-	glColor3f(0.0,1.0,0.0);
-	glBegin(GL_POINTS);
-	glVertex2i(68,48);
 	glEnd();
 
 	glFlush();

@@ -67,8 +67,9 @@ void display(void)
 			glRotatef(rtri,0.0f,0.0f, -1.0f);
 			glTranslatef(-100.0f, -100.0f, 0.0f);
 		}
+		glutSwapBuffers();
 	}
-	glutSwapBuffers();
+	
 	//glutPostRedisplay();
 }
 
