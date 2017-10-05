@@ -57,8 +57,6 @@ void display(void)
 		y4 *= -1;
 
 		glBegin(GL_LINE_LOOP);
-		// co-ordinates of all four vertices of the
-		//sqaure
 		glColor3f(0.0, 1.0, 0.0);
 		glVertex3f(x1, y1, 0.0f);
 		glVertex3f(x2, y2, 0.0f);
@@ -67,9 +65,6 @@ void display(void)
 		glEnd();
 
 		
-		// glTranslatef(-20.0f, 20.0f, 0.0f);
-		// glRotatef(rtri,0.0f,0.0f, -1.0f);
-		// glTranslatef(-20.0f, 20.0f, 0.0f);
 
 		x1 = -20.0f;
 		y1 = 41.21f;
@@ -80,8 +75,8 @@ void display(void)
 		x4 = -41.21f;
 		y4 = 20.0f;
 		glBegin(GL_LINE_LOOP);
-		// co-ordinates of all four vertices of the
-		//sqaure
+
+
 		glColor3f(0.0, 1.0, 0.0);
 		glVertex3f(x1, y1, 0.0f);
 		glVertex3f(x2, y2, 0.0f);
@@ -95,8 +90,7 @@ void display(void)
 		x4 = x4 + 2*y4;
 
 		glBegin(GL_LINE_LOOP);
-		// co-ordinates of all four vertices of the
-		//sqaure
+
 		glColor3f(0.0, 1.0, 0.0);
 		glVertex3f(x1, y1, 0.0f);
 		glVertex3f(x2, y2, 0.0f);
@@ -105,18 +99,14 @@ void display(void)
 		glEnd();
 		
 
-	//glFlush();
 	glutSwapBuffers();
-	//glutPostRedisplay();
+
 }
 int main(int argc, char *argv[])
 {
-	// glutInit will initialize the GLUT library and
-	//negotiate a session with the window system.
+
 	glutInit(&argc,argv);
-	// Select a display mode with single buffer
-	//because its a simple application and Red, green,
-	//blue framebuffer
+
 	glutInitDisplayMode(GLUT_SINGLE |
 	GLUT_RGB);
 	glutInitWindowSize(650, 650);
@@ -125,8 +115,7 @@ int main(int argc, char *argv[])
 	glutCreateWindow("Squares");
 	init2D(0.0, 0.0, 0.0);
 
-	// calls the function display everytime the
-	//display needs to be updated
+
 	glutDisplayFunc(display);
 	glutMainLoop();
 }

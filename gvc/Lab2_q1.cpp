@@ -3,30 +3,21 @@
 GLfloat rtri = 90;
 void init2D(float r, float g, float b)
 {
-	// glClearColor sets the colour to clear the
-	//buffer to.
+
 	glClearColor(r, g, b, 0.0);
-	// used to set up the view volume,
-	//GL_MODELVIEW can be used to set up viewing
-	//transformation
-	//glMatrixMode(GL_PROJECTION);
+
 	glMatrixMode(GL_MODELVIEW);
-	// gluOrtho2D specifies the coordinates to
-	//be used with the viewport which defaults to the
-	//window size.
+
 	gluOrtho2D(0.0, 200.0, 0.0, 200.0);
 }
 void display(void)
 {
-	// clear the buffers currently enabled for
-	//color writing.
+
 
 	
 	glClear(GL_COLOR_BUFFER_BIT);
 	
-	/*glTranslatef(100.0f, 100.0f, 100.0f);
-	glRotatef(rtri,0.0f,0.0f,-1.0f);
-	glTranslatef(-100.0f, -100.0f, -100.0f);*/
+
 	glColor3f(0.0, 1.0, 1.0);
 
 	for(int i = 1;i <= 2;i++){
@@ -70,17 +61,14 @@ void display(void)
 		glutSwapBuffers();
 	}
 	
-	//glutPostRedisplay();
+	
 }
 
 int main(int argc, char *argv[])
 {
-	// glutInit will initialize the GLUT library and
-	//negotiate a session with the window system.
+
 	glutInit(&argc,argv);
-	// Select a display mode with single buffer
-	//because its a simple application and Red, green,
-	//blue framebuffer
+
 	glutInitDisplayMode(GLUT_SINGLE |
 	GLUT_RGB);
 	glutInitWindowSize(650, 650);
@@ -88,8 +76,6 @@ int main(int argc, char *argv[])
 	glutCreateWindow("Transistors");
 	init2D(0.0, 0.0, 0.0);
 
-	// calls the function display everytime the
-	//display needs to be updated
 	glutDisplayFunc(display);
 	glutMainLoop();
 }
