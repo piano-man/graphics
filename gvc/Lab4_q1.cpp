@@ -73,7 +73,7 @@ void display() {
  
    glLoadIdentity();                 
    glTranslatef(-1.5f, 0.0f, -6.0f);  
-   glRotatef(anglePyramid, 1.0f, 1.0f, 0.0f);  ]
+   glRotatef(anglePyramid, 1.0f, 1.0f, 0.0f);  
  
    glBegin(GL_TRIANGLES);         
       // Front
@@ -123,7 +123,7 @@ void timer(int value) {
 }
  
 
-void reshape(GLsizei width, GLsizei height) {  /
+void reshape(GLsizei width, GLsizei height) {  
    if (height == 0) height = 1;                
    GLfloat aspect = (GLfloat)width / (GLfloat)height;
  
